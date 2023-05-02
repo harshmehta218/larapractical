@@ -1,0 +1,95 @@
+{
+	"info": {
+		"_postman_id": "b37784df-3d93-4b89-9e77-27dcf5370ada",
+		"name": "LaravelPractical",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "13554273"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "testuserone@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "testuserone@123",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{Url}}/login"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Questions ",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Url}}/questions",
+							"host": [
+								"{{Url}}"
+							],
+							"path": [
+								"questions"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "-1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "Url",
+			"value": "http://localhost/laravelPractical/public/api",
+			"type": "string"
+		}
+	]
+}
